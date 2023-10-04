@@ -1,0 +1,154 @@
+.header-links {
+    position: absolute;
+    right: 0px;
+    padding: 10px;
+    color: black;
+    font-size: 15px;
+  }
+.header-links a {
+    color:black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+  }
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+.search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.searchBox {
+    width: 500px;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+}
+
+.searchButtons input {
+    background-color: #e5e5e5;
+    border: 0px;
+    border-radius: 4px;
+    color: black;
+    font-family: arial,sans-serif;
+    font-size: 15px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+.searchButtons input:hover {
+    border: 1px solid #787878;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.title {
+    margin-top: 55px;
+    color: #cd0606;
+    font-size: 20px;
+    margin-left: 40px;
+}
+
+body {
+    font-family: arial,sans-serif;
+}
+
+.division {
+    margin-top: 25px;
+    margin-bottom: 35px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(200, 200, 200);
+}
+
+.advanced-table  {
+    margin-left: 30px;
+    margin-right: 70px;
+    /* width: 80%; */
+    display: table;
+    border-collapse: collapse;
+}
+
+
+  
+th, td {
+padding: 8px;
+margin: 0;
+/* border: 1px solid red; */
+font-weight: normal;
+}
+
+td {
+font-size: 13px;
+}
+
+td:nth-child(1), th:nth-child(1) {
+text-align: left;
+width: 25%; 
+white-space: nowrap;
+}
+
+td:nth-child(2) {
+text-align: right;
+}
+
+td:nth-child(3), th:nth-child(3) {
+text-align: left;
+margin: 20px;
+width: 25%;
+}
+
+  
+.advanced-container input[type = text] {
+    width: 95%;
+    height: 22px;
+    margin: 6px;
+    border: 1px solid #ccc;
+}
+.advanced-container input[type = text]:hover {
+    border-color: #378de3;
+}
+
+.example {
+    color: #666;
+    font-family: monospace;
+    
+}
+
+@media (max-width: 768px) {
+    th:nth-child(3), td:nth-child(3) {
+      display: none;
+    }
+  }
+
+.advanced-button input{
+    background-color: #4285f4; 
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 2px;
+} 
+.advanced-button input:hover {
+    border-color: #062d6b;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
