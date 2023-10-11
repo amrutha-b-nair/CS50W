@@ -5,9 +5,11 @@
         <link rel="stylesheet" href = "style.css">
     </head>
     <body class="advanced">
-        <div class="header-links">
-            <a href="index.html">Google Search</a>
-            <a href="image.html">Image Search</a>
+        
+        <div class="advanced-header-links">
+            <a href="index.html"><img class="logo" src="google.png" alt="Google logo"></a>
+            <a class="google-search" href="index.html">Google Search</a>
+            <a class="image-search" href="image.html">Image Search</a>
         </div>
         <br>
         <div class="title">
@@ -38,8 +40,8 @@
                             <td>this exact word or phrase:</td>
                             <td><input type="text" name="as_q"></td>
                             <td>
-                                Put exact words in quotes: "<span class="example">
-                                    rat terrier
+                                Put exact words in quotes: <span class="example">
+                                    "rat terrier"
                             </td>
                         </tr>
                         <tr class="any-words">
@@ -51,7 +53,15 @@
                                 </span>
                             </td>
                         </tr>
-                        <tr class="none-words">
+                        <tr class="none.advanced-container .input-cell input[type = text] {
+    
+    
+                        }
+                        
+                        .advanced-container .input-cell input[type = text]:hover {
+                            border-color: #378de3;
+                        }
+                        -words">
                             <td>none of these words:</td>
                             <td><input type="text" name="as_q"></td>
                             <td>

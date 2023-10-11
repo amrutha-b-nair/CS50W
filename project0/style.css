@@ -1,6 +1,7 @@
 .header-links {
     position: absolute;
     right: 0px;
+    top: 0px;
     padding: 10px;
     color: black;
     font-size: 15px;
@@ -59,12 +60,14 @@ a:hover {
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
 
+
 .title {
     margin-top: 55px;
     color: #cd0606;
     font-size: 20px;
     margin-left: 40px;
 }
+
 
 body {
     font-family: arial,sans-serif;
@@ -77,6 +80,8 @@ body {
     border-bottom-style: solid;
     border-bottom-color: rgb(200, 200, 200);
 }
+
+
 
 .advanced-table  {
     margin-left: 30px;
@@ -152,3 +157,30 @@ width: 25%;
     border-color: #062d6b;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
+
+.advanced-header-links .google-search {
+    position: absolute;
+    right: 0px;
+    padding: 10px;
+    color: black;
+    font-size: 15px;
+  }
+
+  .advanced-header-links .image-search {
+    position: absolute;
+    right: 110px;
+    padding: 10px;
+    color: black;
+    font-size: 15px;
+  }
+  .advanced-header-links a {
+    color:black;
+    text-decoration: none;
+}
+.advanced-header-links a:hover {
+    text-decoration: underline;
+}
+  .advanced-header-links .logo {
+    margin-left: 15px;
+    width: 80px;
+  }
