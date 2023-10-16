@@ -9,5 +9,9 @@
     <div>{{ message|safe }}</div>
     {% endif %}
     <div>{{ entry|safe }}</div>
+    {% if page %}
     <a href="{% url 'edit' title %}">Edit Page</a>
+    {% else %}
+    <a href="{% url 'create' %}">Create Page</a>
+    {% endif %}
 {% endblock %}

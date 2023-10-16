@@ -21,12 +21,15 @@ def index(request):
 
 def article(request, title):
     entry = util.get_entry(title)
+    page = True
     if entry == None:
         entry = "## Page Not Found!!!" 
+        page = False
     # entry = re.sub(r'\[(.*?)\]\(/wiki/([^)]+)\)', r'[\1](/\2)', entry)
     return render(request, "encyclopedia/article.html", {
         "entry": markdown2.markdown(entry),
-        "title": title
+        "title": title,
+        "page": page
     }) 
 
 def search(request):
@@ -68,15 +71,16 @@ def create(request):
 def edit(request, title):
     if request.method == "GET":
         entry = util.get_entry(title)
-        content = re.sub(r'^# .*', '', entry, flags=re.MULTILINE)
+        content = re.sub(r'^#.*\n*', '', entry, flags=re.MULTILINE)
+        print(content)
         unedited = {
             'title': title,
-            'content': entry
+            'content': content
         }
         return render(request, "encyclopedia/edit.html", {
             'new_page': NewPageForm(unedited),
             'title': title,
-            'content': entry
+            'content': content
         }) 
     elif request.method == "POST":
         data = NewPageForm(request.POST)
@@ -84,6 +88,7 @@ def edit(request, title):
         if data.is_valid():
             title = data.cleaned_data['title'].strip()
             content = data.cleaned_data['content'].strip()
+            print(content)
             util.save_entry(title, content)
             return redirect("article", title = title)
         else:
