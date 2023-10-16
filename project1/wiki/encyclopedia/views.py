@@ -4,6 +4,7 @@ from . import util
 from django import forms
 from django.urls import reverse
 import re
+import random
 
 class NewPageForm(forms.Form):
     title = forms.CharField(
@@ -91,5 +92,13 @@ def edit(request, title):
                     'title':title,
                     'message' : markdown2.markdown(error_message)
                  })
+        
+
+def random_page(request):
+    if request.method == 'GET':
+        entries = util.list_entries()
+        title = random.choice(entries)
+        return redirect("article", title = title)
+
 
     
